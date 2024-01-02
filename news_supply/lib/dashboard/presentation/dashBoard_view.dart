@@ -1,8 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:get/get.dart';
 
 
 import '../../drawer_screen/drawer_view.dart';
+import '../../pdf.dart';
 import '../../utils/app_string.dart';
 import '../../utils/color.dart';
 import '../../widgets/title_text_view.dart';
@@ -22,6 +25,14 @@ class DashboardPage extends StatelessWidget {
         title: TitleTextView(AppString.dashBoard),
       ),
       drawer: DrawerScreenPage(),
+      body: Column(
+        children: [
+          CupertinoButton(
+              child: TitleTextView('PDF'), onPressed: () async {
+            await PdfInvoiceApi().generate();
+          })
+        ],
+      ),
     );
   }
 }
