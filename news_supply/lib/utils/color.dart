@@ -53,6 +53,6 @@ class ColorConst {
   static const darkGrey = Color(0xFF334756);
 
   static const containerBgColor = Color(0xFFF5C243);
-  static const bgColor = Color(0xFFF4F3EE);
+  static const bgColor = Color(0xFFF0EFE8);
   static const textColor = Color(0xFFA44A3F);
 }

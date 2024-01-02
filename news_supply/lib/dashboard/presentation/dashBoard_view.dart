@@ -20,6 +20,7 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorConst.bgColor,
       appBar: AppBar(
         backgroundColor: ColorConst.containerBgColor,
         title: TitleTextView(AppString.dashBoard),
