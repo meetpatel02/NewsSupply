@@ -16,7 +16,7 @@ class InvoicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConst.textColor,
+      backgroundColor: ColorConst.bgColor,
       appBar: AppBar(
         backgroundColor: ColorConst.containerBgColor,
         title: TitleTextView(AppString.invoice),
