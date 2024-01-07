@@ -22,6 +22,11 @@ class InvoicePage extends StatelessWidget {
         title: TitleTextView(AppString.invoice),
       ),
       drawer: DrawerScreenPage(),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: ColorConst.containerBgColor,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+          onPressed: (){}, label: TitleTextView("Add Invoice"),
+      ),
     );
   }
 }

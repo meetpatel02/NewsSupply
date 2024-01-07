@@ -96,6 +96,7 @@ class DrawerScreenPage extends StatelessWidget {
               ),
               onTap: () {
                 logic.selectDestination(2);
+                Get.toNamed(RouteClass.client);
                 logic.update();
               },
             ),

@@ -10,11 +10,11 @@ AppBar customAppBar(String title, dynamic leading, dynamic action) {
     title: TitleTextView(
       title,
       fontSize: 16,
-      color: Colors.white,
+      color: Colors.black,
       fontWeight: FontWeight.w600,
     ),
     centerTitle: true,
-    backgroundColor: ColorConst.themeColor,
+    backgroundColor: ColorConst.containerBgColor,
     leading: leading,
     actions: action,
   );

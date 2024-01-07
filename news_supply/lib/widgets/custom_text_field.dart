@@ -38,9 +38,8 @@ class CustomTextField extends StatelessWidget {
       this.onChanged,
       this.onEdit,
       this.onSubmit,
-        this.inputFormatters,
-        this.textCapitalization
-      })
+      this.inputFormatters,
+      this.textCapitalization})
       : super(key: key);
 
   @override
@@ -62,7 +61,7 @@ class CustomTextField extends StatelessWidget {
           TitleTextView(
             titleText,
             fontSize: 11,
-            color: color,
+            color: Colors.black,
           ),
           TextField(
             textInputAction: nextField,
@@ -75,13 +74,16 @@ class CustomTextField extends StatelessWidget {
             onEditingComplete: onEdit,
             onSubmitted: onSubmit,
             textCapitalization: textCapitalization ?? TextCapitalization.none,
-            inputFormatters: inputFormatters??[],
+            inputFormatters: inputFormatters ?? [],
             decoration: InputDecoration(
               contentPadding: const EdgeInsets.all(0.0),
               isDense: true,
               hintText: hintText,
               suffixIcon: icon,
-              hintStyle: TextStyle(fontSize: 15, color: ColorConst.appVersion,fontWeight: FontWeight.w400),
+              hintStyle: TextStyle(
+                  fontSize: 15,
+                  color: ColorConst.appVersion,
+                  fontWeight: FontWeight.w400),
               border: InputBorder.none,
             ),
             minLines: 1,

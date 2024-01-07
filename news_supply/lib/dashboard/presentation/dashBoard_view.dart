@@ -1,9 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:get/get.dart';
-
-
 import '../../drawer_screen/drawer_view.dart';
 import '../../pdf.dart';
 import '../../utils/app_string.dart';
@@ -31,7 +28,8 @@ class DashboardPage extends StatelessWidget {
           CupertinoButton(
               child: TitleTextView('PDF'), onPressed: () async {
             await PdfInvoiceApi().generate();
-          })
+          },
+          ),
         ],
       ),
     );
