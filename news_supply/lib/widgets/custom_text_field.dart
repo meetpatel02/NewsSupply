@@ -46,7 +46,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      width: Get.width - 60,
+      width: Get.width - 40,
       padding: const EdgeInsets.only(
         left: 25,
         top: 6,

@@ -67,7 +67,7 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(radius ?? 50),
           child: TitleTextView(
             text,
-            fontSize: fontSize??13,
+            fontSize: fontSize??15,
             fontWeight: FontWeight.w700,
             color: textColor,
           ),

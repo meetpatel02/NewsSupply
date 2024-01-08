@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:news_supply/routes/route.dart';
 
 import '../../drawer_screen/drawer_view.dart';
 import '../../utils/app_string.dart';
@@ -25,7 +26,10 @@ class InvoicePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: ColorConst.containerBgColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-          onPressed: (){}, label: TitleTextView("Add Invoice"),
+        onPressed: () {
+          Get.toNamed(RouteClass.addInvoice);
+        },
+        label: TitleTextView("Add Invoice"),
       ),
     );
   }

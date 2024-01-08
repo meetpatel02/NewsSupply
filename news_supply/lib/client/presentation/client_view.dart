@@ -30,25 +30,46 @@ class ClientPage extends StatelessWidget {
         ),
       ),
       drawer: DrawerScreenPage(),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 50,
-              child: CupertinoSearchTextField(),
-            ),
-            hSpace(20),
-            ListView.builder(
-              shrinkWrap: true,
-              itemCount: 10,
-              itemBuilder: (context, index) {
-                return Column(
-                  children: [],
-                );
-              },
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+                child: CupertinoSearchTextField(),
+              ),
+              hSpace(20),
+              ListView.builder(
+                shrinkWrap: true,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: Colors.yellow),
+                          ),
+                          wSpace(10),
+                          TitleTextView(
+                            'Client Name',
+                            fontWeight: FontWeight.w600,
+                          )
+                        ],
+                      ),
+                      Divider()
+                    ],
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
